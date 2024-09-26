@@ -8,9 +8,10 @@ export default function Home() {
       <nav>
         <h2>Directory</h2>
         <ul>
-          <li><Link href="/cms">Portfolio & Archive</Link></li>
+          <li><Link href="/archiveandportfolio">Portfolio & Archive</Link></li>
           {/* Add other links as needed */}
         </ul>
       </nav>
     </div>
   );
+}

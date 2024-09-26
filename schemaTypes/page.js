@@ -1,6 +1,13 @@
+// /cms/schemaTypes/cmspost.js
 export default {
-  name: 'page',
-  title: 'Page',
+    {
+      name: 'coverphoto',
+      title: 'Cover Photo',
+      type: 'image',
+      options: { hotspot: true },
+    },
+  name: 'Upload',
+  title: 'Upload',
   type: 'document',
   fields: [
     {
@@ -11,19 +18,13 @@ export default {
     },
     {
       name: 'slug',
-      title: 'Slug',
+      title: 'Link',
       type: 'slug',
       options: {
         source: 'title',
         maxLength: 96,
       },
       validation: (Rule) => Rule.required(),
-    },
-    {
-      name: 'heroImage',
-      title: 'Hero Image',
-      type: 'image',
-      options: { hotspot: true },
     },
     {
       name: 'content',
@@ -36,5 +37,11 @@ export default {
         { type: 'videoEmbed' },
       ],
     },
+    {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'string' }], // Or create a separate tag schema for more control
+    },
   ],
-}
+};
